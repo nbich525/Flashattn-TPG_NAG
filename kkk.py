@@ -4,7 +4,6 @@ import torch
 from diffusers import AutoencoderKL
 from pipeline_sdxl_tpg import StableDiffusionXLTPGPipeline
 
-# login(token="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")
 vae = AutoencoderKL.from_pretrained("madebyollin/sdxl-vae-fp16-fix", torch_dtype=torch.float16, device_map = 'auto')
 pipe = StableDiffusionXLTPGPipeline.from_pretrained(
     "stabilityai/stable-diffusion-xl-base-1.0",
